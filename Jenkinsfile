@@ -16,13 +16,10 @@ pipeline {
                     steps {
                        sh"mvn test"
                     }
+                    steps {
+                       sh"mvn verify"
+                    }
 
                 }
-         stage('Succes') {
-              steps {
-                sh 'echo "success"'
-              }
-            }
-
     }
 }
