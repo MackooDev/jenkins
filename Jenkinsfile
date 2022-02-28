@@ -20,7 +20,7 @@ pipeline {
                 }
         stage('succes'){
               steps{
-              sh"succesfully"
+              sh 'echo"succes"'
               }
         }
 
