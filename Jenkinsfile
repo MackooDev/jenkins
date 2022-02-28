@@ -12,21 +12,12 @@ pipeline {
                sh"mvn clean compile"
             }
         }
+        stage('test') {
+                    steps {
+                       sh"mvn test"
+                    }
+                }
 
-
-         stage('Test') {
-              parallel {
-               stage('Unit') {
-                  steps {
-                            sh 'mvn test'
-                          }
-                        }
-
-                        stage('Integration') {
-                          steps {
-                            sh 'mvn verify'
-                          }
-                        }
          stage('Succes') {
               steps {
                 sh 'echo "success"'
