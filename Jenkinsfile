@@ -18,11 +18,11 @@ pipeline {
                     }
 
                 }
-        stage('succes'){
-              steps{
-              sh 'echo"succes"'
+         stage('Succes') {
+              steps {
+                sh 'echo "success"'
               }
-        }
+            }
 
     }
 }
