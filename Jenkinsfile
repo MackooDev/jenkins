@@ -16,8 +16,10 @@ pipeline {
                     steps {
                        sh"mvn test"
                     }
+                    stage("test integration"){
                     steps {
                        sh"mvn verify"
+                    }
                     }
 
                 }
